@@ -12,6 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
@@ -21,7 +22,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Role extends BaseEntity implements Serializable {
-    @Column(nullable = false)
+    @Serial
+    private static final long serialVersionUID = 2239256730509848511L;
+
+    @Column(nullable = false, unique = true)
     @Enumerated(EnumType.STRING)
     @RolesValue
     private ERole name;

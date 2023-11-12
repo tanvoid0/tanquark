@@ -24,7 +24,7 @@ public class RoleRepository implements PanacheRepository<Role> {
             if (roleEntity.isEmpty()) {
                 final Role newRole = new Role(role, null);
 
-                this.persist(newRole);
+                newRole.persist();
                 newRoles.add(newRole.getName().name());
             }
         });

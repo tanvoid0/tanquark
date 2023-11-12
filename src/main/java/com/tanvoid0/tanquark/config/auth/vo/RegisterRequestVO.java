@@ -1,5 +1,6 @@
 package com.tanvoid0.tanquark.config.auth.vo;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -26,5 +27,13 @@ public class RegisterRequestVO {
     @NotNull
     @Schema(example = "Guest User")
     private String name;
+
+    @NotNull
+    @Schema(example = "guestuser")
+    private String username;
+
+    @Schema(example = "+44123")
+    @Column(length = 20)
+    private String phone;
 
 }

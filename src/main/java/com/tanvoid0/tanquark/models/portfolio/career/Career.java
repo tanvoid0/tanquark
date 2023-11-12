@@ -21,8 +21,8 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -36,33 +36,33 @@ public class Career extends BaseEntity implements Serializable {
 
     @OneToMany(mappedBy = "career", cascade = CascadeType.ALL, orphanRemoval = false)
     @OrderBy("orderSeq ASC")
-    private Set<Academic> academics;
+    private List<Academic> academics;
 
     @OneToMany(mappedBy = "career", cascade = CascadeType.ALL, orphanRemoval = false)
     @OrderBy("orderSeq ASC")
-    private Set<Achievement> achievements;
+    private List<Achievement> achievements;
 
     @OneToMany(mappedBy = "career", cascade = CascadeType.ALL, orphanRemoval = false)
     @OrderBy("orderSeq ASC")
-    private Set<Certificate> certificates;
+    private List<Certificate> certificates;
 
     @OneToMany(mappedBy = "career", cascade = CascadeType.ALL, orphanRemoval = false)
     @OrderBy("orderSeq ASC")
-    private Set<Experience> experiences;
+    private List<Experience> experiences;
 
     @OneToMany(mappedBy = "career", cascade = CascadeType.ALL, orphanRemoval = false)
     @OrderBy("orderSeq ASC")
-    private Set<Voluntary> voluntaries;
+    private List<Voluntary> voluntaries;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "portfolio_user_id", nullable = false)
-    private PortfolioUser portfolio_user;
+    private PortfolioUser portfolioUser;
 
     public Career() {
-        academics = new HashSet<>();
-        achievements = new HashSet<>();
-        certificates = new HashSet<>();
-        experiences = new HashSet<>();
-        voluntaries = new HashSet<>();
+        academics = new ArrayList<>();
+        achievements = new ArrayList<>();
+        certificates = new ArrayList<>();
+        experiences = new ArrayList<>();
+        voluntaries = new ArrayList<>();
     }
 }

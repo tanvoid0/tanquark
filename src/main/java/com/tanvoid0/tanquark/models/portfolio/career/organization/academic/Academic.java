@@ -21,7 +21,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "organization_academic")
+@Table(name = "career_academic")
 public class Academic extends Organization implements Serializable {
 
     public static final String NAME = "Academic";

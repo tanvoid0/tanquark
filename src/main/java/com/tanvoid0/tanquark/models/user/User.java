@@ -9,20 +9,11 @@ import io.quarkus.security.jpa.Roles;
 import io.quarkus.security.jpa.UserDefinition;
 import io.quarkus.security.jpa.Username;
 import jakarta.annotation.Nonnull;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -35,6 +26,9 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @UserDefinition
 public class User extends BaseEntity implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 375190894097691951L;
 
     public final String _type = "User";
 
@@ -51,7 +45,13 @@ public class User extends BaseEntity implements Serializable {
     @JsonIgnore
     public String password;
 
+    @Nonnull
+    @Column(nullable = false)
+    public String username;
+
     public String name;
+
+    public String phone;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
@@ -66,6 +66,10 @@ public class User extends BaseEntity implements Serializable {
         return roles.stream()
                 .map(role -> role.getName().toString())
                 .collect(Collectors.toSet());
+    }
+
+    public void addRole(Role role) {
+        roles.add(role);
     }
 
 }

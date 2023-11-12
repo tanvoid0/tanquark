@@ -21,7 +21,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "organization_achievement")
+@Table(name = "career_achievement")
 public class Achievement extends Organization implements Serializable {
 
     public static final String NAME = "Achievement";

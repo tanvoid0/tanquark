@@ -13,6 +13,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -22,6 +23,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @MappedSuperclass
 public abstract class BaseEntity extends PanacheEntityBase implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1110451622927908191L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;

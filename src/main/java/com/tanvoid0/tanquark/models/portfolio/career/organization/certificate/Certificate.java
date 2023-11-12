@@ -20,7 +20,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "organization_certificate")
+@Table(name = "career_certificate")
 public class Certificate extends Organization implements Serializable {
     public static final String NAME = "Certificate";
 

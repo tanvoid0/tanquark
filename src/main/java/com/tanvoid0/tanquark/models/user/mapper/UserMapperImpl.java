@@ -10,7 +10,7 @@ import org.modelmapper.ModelMapper;
 
 @ApplicationScoped
 class UserMapperImpl implements UserMapper {
-    ModelMapper mapper = new ModelMapper();
+    final ModelMapper mapper = new ModelMapper();
 
     @Override
     public User toEntity(RegisterRequestVO registerUser) {

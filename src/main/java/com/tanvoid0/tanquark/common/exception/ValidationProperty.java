@@ -12,4 +12,8 @@ import lombok.experimental.SuperBuilder;
 public class ValidationProperty {
     private String property;
     private String value;
+
+    public static ValidationProperty of(final String property, final String value) {
+        return new ValidationProperty(property, value);
+    }
 }

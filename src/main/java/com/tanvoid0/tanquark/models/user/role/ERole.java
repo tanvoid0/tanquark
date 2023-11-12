@@ -6,7 +6,9 @@ import java.util.Set;
 
 public enum ERole {
     USER,
-    ADMIN;
+    GUEST,
+    ADMIN,
+    PORTFOLIO_USER;
 
     public static Set<ERole> getAllAsSet() {
         return EnumSet.allOf(ERole.class);
