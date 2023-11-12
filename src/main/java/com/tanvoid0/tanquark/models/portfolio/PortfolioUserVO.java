@@ -3,6 +3,7 @@ package com.tanvoid0.tanquark.models.portfolio;
 import com.tanvoid0.tanquark.common.base.BaseVO;
 import com.tanvoid0.tanquark.models.portfolio.career.vo.CareerVO;
 import com.tanvoid0.tanquark.models.portfolio.hobby.vo.HobbyVO;
+import com.tanvoid0.tanquark.models.portfolio.portfolio.PortfolioVO;
 import com.tanvoid0.tanquark.models.portfolio.skill_group.SkillGroupVO;
 import com.tanvoid0.tanquark.models.portfolio.social.vo.SocialVO;
 import com.tanvoid0.tanquark.models.user.UserVO;
@@ -50,7 +51,7 @@ public class PortfolioUserVO extends BaseVO implements Serializable {
 
     private SkillGroupVO skill;
 
-//    private Portfolio portfolio;
+    private PortfolioVO portfolio;
 }
 
 

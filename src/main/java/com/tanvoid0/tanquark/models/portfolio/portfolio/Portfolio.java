@@ -3,7 +3,7 @@ package com.tanvoid0.tanquark.models.portfolio.portfolio;
 import com.tanvoid0.tanquark.common.base.BaseEntity;
 import com.tanvoid0.tanquark.models.portfolio.PortfolioUser;
 import com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge_portfolio.OnlineJudgePortfolio;
-import com.tanvoid0.tanquark.models.portfolio.portfolio.project.ProjectPortfolio;
+import com.tanvoid0.tanquark.models.portfolio.portfolio.project_porfolio.ProjectPortfolio;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

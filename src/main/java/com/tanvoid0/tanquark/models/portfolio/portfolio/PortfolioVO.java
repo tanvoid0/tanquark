@@ -1,8 +1,8 @@
 package com.tanvoid0.tanquark.models.portfolio.portfolio;
 
 import com.tanvoid0.tanquark.common.base.BaseVO;
-import com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge_portfolio.OnlineJudgePortfolio;
-import com.tanvoid0.tanquark.models.portfolio.portfolio.project.ProjectPortfolio;
+import com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge_portfolio.OnlineJudgePortfolioVO;
+import com.tanvoid0.tanquark.models.portfolio.portfolio.project_porfolio.ProjectPortfolioVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,8 +26,8 @@ public class PortfolioVO extends BaseVO implements Serializable {
     private static final long serialVersionUID = 6189903416500501747L;
 
     @Builder.Default
-    private Set<OnlineJudgePortfolio> onlineJudges = new HashSet<>();
+    private Set<OnlineJudgePortfolioVO> onlineJudges = new HashSet<>();
 
     @Builder.Default
-    private Set<ProjectPortfolio> projects = new HashSet<>();
+    private Set<ProjectPortfolioVO> projects = new HashSet<>();
 }

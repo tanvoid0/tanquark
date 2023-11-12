@@ -1,4 +1,4 @@
-package com.tanvoid0.tanquark.models.portfolio.portfolio.project;
+package com.tanvoid0.tanquark.models.portfolio.portfolio.project_porfolio;
 
 import com.tanvoid0.tanquark.common.base.BaseEntityOrdered;
 import com.tanvoid0.tanquark.models.portfolio.portfolio.Portfolio;
@@ -18,8 +18,8 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -43,14 +43,12 @@ public class ProjectPortfolio extends BaseEntityOrdered implements Serializable 
     private String demo;
     private String source;
 
-    //    @Enumerated(EnumType.STRING)
-//    @Convert(converter = PlatformTypeEnumSetConverter.class)
     @ElementCollection
     @Enumerated(EnumType.STRING)
-    private Set<EPlatformType> platform = new HashSet<>();
+    private List<EPlatformType> platform = new ArrayList<>();
 
     @ElementCollection
-    private Set<String> tags = new HashSet<>();
+    private List<String> tags = new ArrayList<>();
 
 
 //    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
