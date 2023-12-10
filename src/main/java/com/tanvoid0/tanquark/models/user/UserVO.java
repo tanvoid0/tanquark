@@ -14,8 +14,10 @@ import java.util.Set;
 @NoArgsConstructor
 @SuperBuilder
 public class UserVO {
+    public String phone;
     private Long id;
     private String email;
     private String name;
+    private String username;
     private Set<String> roles;
 }

@@ -2,34 +2,30 @@ package com.tanvoid0.tanquark.models.portfolio;
 
 import com.tanvoid0.tanquark.common.exception.ResourceNotFoundException;
 import com.tanvoid0.tanquark.models.portfolio.mapper.PortfolioUserMapper;
+import com.tanvoid0.tanquark.models.portfolio.portfolio_contact_request.NewPortfolioContactRequestVO;
 import com.tanvoid0.tanquark.models.user.User;
 import com.tanvoid0.tanquark.models.user.UserRepository;
 import com.tanvoid0.tanquark.models.user.role.ERole;
 import com.tanvoid0.tanquark.models.user.role.Role;
 import com.tanvoid0.tanquark.models.user.role.RoleRepository;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 
 @Transactional
 @ApplicationScoped
+@RequiredArgsConstructor
 public class PortfolioUserService {
 
-    @Inject
-    PortfolioUserRepository portfolioUserRepository;
+    private final PortfolioUserRepository portfolioUserRepository;
 
-    @Inject
-    UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    @Inject
-    RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
-    @Inject
-    PortfolioUserValidator validator;
+    private final PortfolioUserValidator validator;
 
-
-    @Inject
-    PortfolioUserMapper portfolioUserMapper;
+    private final PortfolioUserMapper portfolioUserMapper;
 
     public PortfolioUserVO findByUsername(final String username) {
         return portfolioUserMapper.toVO(findEntityByUsername(username));
@@ -49,6 +45,10 @@ public class PortfolioUserService {
         portfolioUser.persist();
 
         return portfolioUserMapper.toVO(portfolioUser);
+    }
+
+    public void contactRequest(final NewPortfolioContactRequestVO request) {
+
     }
 
     private PortfolioUser findEntityByUsername(final String username) {

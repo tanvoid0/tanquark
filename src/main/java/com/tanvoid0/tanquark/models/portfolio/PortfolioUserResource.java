@@ -5,11 +5,17 @@ import com.tanvoid0.tanquark.models.user.User;
 import jakarta.annotation.security.PermitAll;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
-import jakarta.ws.rs.*;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 @ApplicationScoped
@@ -17,20 +23,21 @@ import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 @Consumes(MediaType.APPLICATION_JSON)
 @Transactional
 @Path("/api/portfolio")
+@RequiredArgsConstructor
+@Slf4j
 public class PortfolioUserResource {
 
-    @Inject
-    PortfolioUserService portfolioUserService;
+    private final PortfolioUserService portfolioUserService;
 
-    @Inject
-    AuthService authService;
+    private final AuthService authService;
 
     @GET
     @Path("/user/{username}")
     @PermitAll
-    // Make use of token
     public Response getPortfolioUser(@PathParam("username") final String username) {
-        return Response.ok(portfolioUserService.findByUsername(username)).build();
+        log.debug("Request to get portfolio for user {}", username);
+        final PortfolioUserVO userVO = portfolioUserService.findByUsername(username);
+        return Response.ok(userVO).build();
     }
 
     @POST
@@ -40,6 +47,5 @@ public class PortfolioUserResource {
         final User user = authService.getAuthenticatedUser();
         return Response.ok(portfolioUserService.create(request, user.getUsername())).build();
     }
-
 
 }

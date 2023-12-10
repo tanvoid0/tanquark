@@ -1,1 +1,3 @@
 *.pem
+*.conf.txt
+application-prod.properties

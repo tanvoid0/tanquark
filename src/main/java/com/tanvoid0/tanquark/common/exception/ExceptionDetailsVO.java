@@ -9,7 +9,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -21,7 +23,11 @@ import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Slf4j
 public class ExceptionDetailsVO implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 9173985491713456471L;
+
     @JsonIgnore
     @Getter(AccessLevel.NONE)
     private HttpResponseStatus httpStatus = HttpResponseStatus.INTERNAL_SERVER_ERROR;
@@ -40,6 +46,11 @@ public class ExceptionDetailsVO implements Serializable {
     private List<ValidationProperty> validations = new ArrayList<>();
 
     public static Response response(final Exception ex) {
+        log.debug("A Global Exception occurred.");
+        log.error("Exception: {}", ex.getClass().getSimpleName());
+        log.error("Message: {}", ex.getMessage());
+        log.error("Cause: {}", ex.getCause().toString());
+        log.error("Stacktrace: {}", (Object[]) ex.getStackTrace());
         final ExceptionDetailsVO detailsVO = new ExceptionDetailsVO();
         if (ex.getClass().getSimpleName().startsWith("Invalid")) {
             detailsVO.setHttpStatus(HttpResponseStatus.BAD_REQUEST);

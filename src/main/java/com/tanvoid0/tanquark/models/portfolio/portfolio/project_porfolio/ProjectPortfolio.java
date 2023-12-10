@@ -55,6 +55,11 @@ public class ProjectPortfolio extends BaseEntityOrdered implements Serializable 
 //    @OrderBy("orderSeq ASC")
 //    private Set<ProjectFile> images = new HashSet<>();
 
+    private String coverImage;
+
+    @ElementCollection
+    private List<String> images = new ArrayList<>();
+
     @Enumerated(EnumType.STRING)
     private EProjectStatus status;
 

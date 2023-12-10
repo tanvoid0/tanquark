@@ -1,0 +1,5 @@
+--FROM postgres:16
+--
+--# Set environment variables - replace 'postgres' with your actual password
+--ENV POSTGRES_PASSWORD=postgres
+--ENV POSTGRES_DB=pg_db

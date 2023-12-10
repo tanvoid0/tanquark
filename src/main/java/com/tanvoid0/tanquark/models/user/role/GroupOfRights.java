@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -18,6 +19,9 @@ import java.util.Set;
 @NoArgsConstructor
 @Table(name = "group_of_rights")
 public class GroupOfRights extends BaseEntity implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 3716690826903604425L;
+
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "group_of_rights_roles",

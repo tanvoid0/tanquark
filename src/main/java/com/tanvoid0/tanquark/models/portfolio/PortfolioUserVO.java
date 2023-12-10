@@ -6,7 +6,6 @@ import com.tanvoid0.tanquark.models.portfolio.hobby.vo.HobbyVO;
 import com.tanvoid0.tanquark.models.portfolio.portfolio.PortfolioVO;
 import com.tanvoid0.tanquark.models.portfolio.skill_group.SkillGroupVO;
 import com.tanvoid0.tanquark.models.portfolio.social.vo.SocialVO;
-import com.tanvoid0.tanquark.models.user.UserVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,6 +27,7 @@ public class PortfolioUserVO extends BaseVO implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 8558878882117345174L;
+    public String phone;
     @Builder.Default
     private List<HobbyVO> hobbies = new ArrayList<>();
     @Builder.Default
@@ -45,7 +45,10 @@ public class PortfolioUserVO extends BaseVO implements Serializable {
     private String aboutDetails;
     private String cvUrl;
     private String webUrl;
-    private UserVO user;
+    // USER data
+    private String email;
+    private String name;
+    private String username;
 
     private CareerVO career;
 

@@ -25,6 +25,7 @@ public class ProjectPortfolioVO extends BaseOrderedVO {
     private String source;
     private EPlatformType platform = EPlatformType.UNCATEGORIZED;
     private List<String> tags = new ArrayList<>();
-    //    private List<ImageLinkVO> images = new ArrayList<>();
+    private String coverImage;
+    private List<String> images = new ArrayList<>();
     private Long orderSeq;
 }

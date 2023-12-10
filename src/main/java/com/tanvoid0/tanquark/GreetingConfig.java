@@ -1,3 +1,5 @@
+package com.tanvoid0.tanquark;
+
 import io.smallrye.config.ConfigMapping;
 import io.smallrye.config.WithName;
 
@@ -6,6 +8,5 @@ public interface GreetingConfig {
 
     @WithName("message")
     String message();
-
 
 }
