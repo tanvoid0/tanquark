@@ -1,4 +1,4 @@
-package com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge_portfolio;
+package com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class NewOnlineJudgePortfolioVO {
+public class UpdateOnlineJudgeVO {
     private String name;
     private String icon;
     private String image;

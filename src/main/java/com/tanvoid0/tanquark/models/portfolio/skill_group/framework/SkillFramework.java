@@ -10,6 +10,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "skill_framework")
+@Table(name = "skill_framework", uniqueConstraints = @UniqueConstraint(columnNames = {"name"}))
 public class SkillFramework extends BaseSkill implements Serializable {
 
     @Serial
@@ -49,6 +50,6 @@ public class SkillFramework extends BaseSkill implements Serializable {
     private PlatformType platform;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "skill_id", nullable = false)
+    @JoinColumn(name = "skill_group_id", nullable = false)
     private SkillGroup skillGroup;
 }

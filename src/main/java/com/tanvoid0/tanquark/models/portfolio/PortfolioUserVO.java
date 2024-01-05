@@ -36,7 +36,7 @@ public class PortfolioUserVO extends BaseVO implements Serializable {
     private String address;
     private String fullName;
     private String coverImage;
-    private short yob;
+    private Short yob;
     private String title;
     private String titles;
     private String degree;
@@ -45,6 +45,7 @@ public class PortfolioUserVO extends BaseVO implements Serializable {
     private String aboutDetails;
     private String cvUrl;
     private String webUrl;
+    private String publicEmail;
     // USER data
     private String email;
     private String name;

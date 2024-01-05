@@ -1,0 +1,1071 @@
+{
+  "email": "tanvoid0@gmail.com",
+  "username": "tanvoid0",
+  "password": "tanvoid0",
+  "publicEmail": "dev.tanveer.me@gmail.com",
+  "phone": "+447767651102",
+  "about": "A Backend and Cross Platform Application Developer.\n\nI enjoy working on projects. My goal is to always build products that provide modern solution to age old problems.\n\nI love travelling and trying new things.",
+  "aboutDetails": "Experienced Developer with a demonstrated history of working in the computer software industry. Skilled in Problem-solving, Software Development, Web Development, Android Development, Embedded Systems Development. Strong ideas and working ability with a Masters Degree focused in Computer Science.",
+  "address": "Cardiff, UK",
+  "avatar": "https://i.imgur.com/XdoTTFo.png",
+  "career": {
+    "createdAt": "2023-11-12T18:59:47.628623",
+    "id": 1,
+    "updatedAt": "2023-11-12T18:59:47.628623",
+    "version": 0,
+    "academics": [
+      {
+        "activities": "",
+        "address": "Wales, United Kingdom",
+        "description": "Dissertation in Implementing a Secure Lost & Found Application",
+        "institution": "University of South Wales",
+        "logo": "https://emedia1.nhs.wales/CAVUhb/cache/file/02BF29E9-D070-463F-905BCA6D3199AC28_medium.jpg",
+        "timeline": "2020-2021",
+        "title": "M.Sc. in Computer Science",
+        "graduation": "2021"
+      },
+      {
+        "activities": "",
+        "address": "Dhaka, Bangladesh",
+        "description": "Dissertation in Data analysis on Home Forestation using IoT",
+        "institution": "Daffodil International University",
+        "logo": "https://daffodilvarsity.edu.bd/template/images/diulogoside.png",
+        "timeline": "2015-2019",
+        "title": "B.Sc. in Computer Science",
+        "graduation": "2019"
+      }
+    ],
+    "achievements": [
+      {
+        "activities": "",
+        "address": "Mumbai, India",
+        "description": "Idea of Fresh food cart delivery & online marketplace with the challenge of creating a job for 10,000 youths. Had to beat 560 teams on campus (worlds most teams from a single university participating for the competition) and 60 international teams in India.",
+        "image": null,
+        "institution": "Hult Prize",
+        "logo": "https://www.pikpng.com/pngl/m/440-4403249_volunteered-as-a-judge-coordinator-at-the-hult.png",
+        "timeline": "2019",
+        "title": "Mumbai Regional 2019 finale",
+        "achievement": "Top 6 Finalist"
+      },
+      {
+        "activities": "",
+        "address": "Dhaka, Bangladesh",
+        "description": "Qinter, an app that helps to find lost belongings",
+        "image": null,
+        "institution": "Daffodil International University",
+        "logo": "https://daffodilvarsity.edu.bd/template/images/diulogoside.png",
+        "timeline": "2019",
+        "title": "DIU ICT Carnival 2019 finale",
+        "achievement": "Finalist"
+      },
+      {
+        "activities": "",
+        "address": "Dhaka, Bangladesh",
+        "description": "Business proposal of a Smart device that helps to do smart gardening with the challenge of renewable energy",
+        "image": null,
+        "institution": "Daffodil International University",
+        "logo": "https://daffodilvarsity.edu.bd/template/images/diulogoside.png",
+        "timeline": "2017",
+        "title": "Hult Prize Campus 2017 finale",
+        "achievement": "Top 6 Campus Finalist"
+      },
+      {
+        "activities": "",
+        "address": "Dhaka, Bangladesh",
+        "description": "",
+        "image": null,
+        "institution": "Daffodil International University",
+        "logo": "https://daffodilvarsity.edu.bd/template/images/diulogoside.png",
+        "timeline": "2016",
+        "title": "Inter Section Programming Contest (Team)",
+        "achievement": "Winner"
+      }
+    ],
+    "certificates": [
+      {
+        "title": "Advanced Graphics Design & Outsourcing",
+        "logo": "http://bkiict.bcc.net.bd/sitecontent/img/bcc_logo.png",
+        "institution": "Bangladesh Computer Council",
+        "address": "Dhaka, Bangladesh",
+        "timeline": "4 months",
+        "activities": "Learned to use <strong>Adobe Photoshop, Adobe Illustrator, and Freelancing market</strong>",
+        "graduation": "2015",
+        "url": ""
+      }
+    ],
+    "experiences": [
+      {
+        "activities": "Spring Boot, Finance Microservices",
+        "address": "Newport, United Kingdom",
+        "description": "Back-end developer on a team of 4 responsible for developing a scalable web application. Communicated\nregularly with the front-end developers and provided feedback on the application design.\n* Created script for automating development cycle from development to deployment\n* Created custom Kubernetes management tool using flutter\n* Helped on data migration with one senior Developer\n* Helped to develop Payment Scheduling with Spring batch\n* Controller Unit test minimisation library\n* Written documents to aid other developers of procedures and troubleshooting\n* Worked on Spring boot, Spring batch, Postgres, HQL, NodeJS, GraphQL, Kubernetes, GCloud, Kibana\n* Helped team split Features into stories and subtasks with time estimation\n* Worked on Scrum & Kanban based Development Lifecycle.",
+        "image": null,
+        "institution": "OLM Systems",
+        "logo": "https://w5a9n3j9.rocketcdn.me/wp-content/uploads/2020/10/OLM-LOGO-full-300x150.jpg",
+        "timeline": "Jan 2022 - Present",
+        "title": "Backend Developer",
+        "role": ""
+      },
+      {
+        "activities": "Algorithms, Data Structures, Problem Solving",
+        "address": "Dhaka, Bangladesh",
+        "description": "Attended training on\n* Object Oriented Programming & Data Structures\n* Dynamic Programming\n* Graphs",
+        "image": null,
+        "institution": "Samsung Research & Development Institute Bangladesh",
+        "logo": "https://cdn.codeground.org/nsr/images/layout/logo-sr.png",
+        "timeline": "1 Month Program, 2019",
+        "title": "Intern",
+        "role": ""
+      }
+    ],
+    "voluntaries": [
+      {
+        "title": "Vice President",
+        "role": "Software Development Wing",
+        "institution": "Computer & Programming Club, DIU",
+        "address": "Dhaka, Bangladesh",
+        "timeline": "2018 - 2019",
+        "description": "Administrative work, Promoting & encouraging Software Development\nOrganized Workshops & Training on: GitHub, SEO, Database Management with Java, Web Development with PHP, Introduction to UI/UX"
+      },
+      {
+        "title": "Trainer",
+        "institution": "DIU",
+        "address": "Dhaka, Bangladesh",
+        "timeline": "2018 - 2019",
+        "description": "Database Management with JAVA, Web Development with PHP"
+      },
+      {
+        "title": "Lab Assistant",
+        "institution": "DIU",
+        "address": "Dhaka, Bangladesh",
+        "timeline": "2017 - 2018",
+        "description": "OOP, Programming & Problem Solving, Data Structures"
+      }
+    ]
+  },
+  "coverImage": "",
+  "cvUrl": "https://drive.google.com/uc?export=download&id=1Leqfrjddci5tx2cAXu1UZnyOK1OZ1yRU",
+  "degree": "M.Sc. in Computer Science",
+  "fullName": "Tanveer",
+  "hobbies": [
+    {
+      "createdAt": "2023-11-12T16:56:14.421414",
+      "id": 1,
+      "updatedAt": "2023-11-12T16:56:14.42759",
+      "version": 1,
+      "icon": "0xf206",
+      "orderSeq": 1,
+      "title": "Cycling"
+    },
+    {
+      "createdAt": "2023-11-12T16:56:14.435736",
+      "id": 2,
+      "updatedAt": "2023-11-12T16:56:14.439733",
+      "version": 1,
+      "icon": "0xf5c1",
+      "orderSeq": 2,
+      "title": "Travelling"
+    },
+    {
+      "createdAt": "2023-11-12T16:56:14.447751",
+      "id": 3,
+      "updatedAt": "2023-11-12T16:56:14.452254",
+      "version": 1,
+      "icon": "0xf02d",
+      "orderSeq": 3,
+      "title": "Reading"
+    },
+    {
+      "createdAt": "2023-11-12T16:56:14.460359",
+      "id": 4,
+      "updatedAt": "2023-11-12T16:56:14.464286",
+      "version": 1,
+      "icon": "0xf544",
+      "orderSeq": 4,
+      "title": "Automation"
+    },
+    {
+      "createdAt": "2023-11-12T16:56:14.471699",
+      "id": 5,
+      "updatedAt": "2023-11-12T16:56:14.476077",
+      "version": 1,
+      "icon": "0xf11b",
+      "orderSeq": 5,
+      "title": "Gaming"
+    },
+    {
+      "createdAt": "2023-11-12T16:56:14.483608",
+      "id": 6,
+      "updatedAt": "2023-11-12T16:56:14.48751",
+      "version": 1,
+      "icon": "0xf121",
+      "orderSeq": 6,
+      "title": "Coding"
+    }
+  ],
+  "name": "Tanveer",
+  "portfolio": {
+    "createdAt": "2023-11-12T16:23:38.679677",
+    "id": 1,
+    "updatedAt": "2023-11-12T16:23:38.679677",
+    "version": 0,
+    "onlineJudges": [
+      {
+        "createdAt": "2023-11-12T16:23:38.766857",
+        "id": 4,
+        "updatedAt": "2023-11-12T16:23:38.772384",
+        "version": 1,
+        "image": "https://popsql.com/static/external-logos/freecodecamp.png",
+        "name": "Freecodecamp",
+        "progress": "286+ Points",
+        "url": "https://www.freecodecamp.org/tanvoid0"
+      },
+      {
+        "createdAt": "2023-11-12T16:23:38.788404",
+        "id": 5,
+        "updatedAt": "2023-11-12T16:23:38.794238",
+        "version": 1,
+        "image": "https://i.imgur.com/YRO2TMj.jpg",
+        "name": "Timus OJ",
+        "progress": "300+ Rating",
+        "url": "https://acm.timus.ru/author.aspx?id=211478"
+      },
+      {
+        "createdAt": "2023-11-12T16:23:38.725185",
+        "id": 2,
+        "updatedAt": "2023-11-12T16:23:38.730522",
+        "version": 1,
+        "image": "https://pbs.twimg.com/profile_images/1452678635178053646/I0XsDRcl_400x400.jpg",
+        "name": "BeeCrowd",
+        "progress": "180+ Solved",
+        "url": "https://www.beecrowd.com.br/judge/en/profile/110031"
+      },
+      {
+        "createdAt": "2023-11-12T16:23:38.746063",
+        "id": 3,
+        "updatedAt": "2023-11-12T16:23:38.751498",
+        "version": 1,
+        "image": "https://miro.medium.com/max/1200/0*SqKMsOvAhxEjZodq.png",
+        "name": "Leet Code",
+        "progress": "19+ Problem Solved",
+        "url": "https://leetcode.com/tanvoid0/"
+      },
+      {
+        "createdAt": "2023-11-12T16:23:38.690485",
+        "id": 1,
+        "updatedAt": "2023-11-12T16:23:38.701864",
+        "version": 1,
+        "image": "https://i0.wp.com/gradsingames.com/wp-content/uploads/2016/05/856771_668224053197841_1943699009_o.png",
+        "name": "Hackerrank",
+        "progress": "6200+ HackOS",
+        "url": "https://www.hackerrank.com/thaque20"
+      },
+      {
+        "createdAt": "2023-11-12T16:23:38.81164",
+        "id": 6,
+        "updatedAt": "2023-11-12T16:23:38.819971",
+        "version": 1,
+        "image": "https://scontent1.thetypingcat.com/images/thetypingcat.png",
+        "name": "Typing Cat",
+        "progress": "74+ WPM",
+        "url": "https://thetypingcat.com/user/83040"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Qinter",
+        "description": "A self developed project part of Masters dissertation. A Cross platform application that helpds to connect people with lost belongings. A modern platform of Lost & Found. Part of this dissertation covered users' data protection using JWT and Data Encryption Algorithms.",
+        "source": "https://github.com/tanvoid0/qinter",
+        "tags": [
+          "Cross Platform",
+          "Flutter",
+          "Mobile Application",
+          "Research",
+          "Encryption",
+          "Cross Hobby"
+        ],
+        "status": "DEVELOPMENT"
+      },
+      {
+        "title": "Qinter React Native",
+        "description": "Qinter Application in React Native",
+        "source": "https://github.com/tanvoid0/qinter-rn"
+      },
+      {
+        "title": "Qinter React Android",
+        "description": "Qinter Application in Android",
+        "source": "https://github.com/tanvoid0/qFinder",
+        "demo": "https://www.amazon.com/-/es/dp/B07G6C5FB1"
+      },
+      {
+        "title": "Eco-friend",
+        "description": "Requires a lot of description. will be updated soon",
+        "source": "https://github.com/tanvoid0/eco-friend",
+        "php_api": "// possibly php api: https://github.com/tanvoid0/Api"
+      },
+      {
+        "title": "IQ Tester",
+        "description": "Our teacher threw us a challenge, and we managed to solve it. A dummy IQ Tester (Well in real world, it's not that easy to simulate IQ Testing, but it worked)",
+        "source": "https://github.com/tanvoid0/IQ-Tester"
+      },
+      {
+        "title": "Graphics Lab",
+        "source": "https://github.com/tanvoid0/Lab"
+      },
+      {
+        "title": "Algorithm",
+        "description": "A collection of all the solutions to the Online Judge problems I've solved",
+        "source": "https://github.com/tanvoid0/Algorithm"
+      },
+      {
+        "title": "Solution to URI in Python",
+        "source": "https://github.com/tanvoid0/URI"
+      },
+      {
+        "title": "Problem Solving",
+        "description": "A more organized version of Algorithm, trying to follow a few books",
+        "source": "https://github.com/tanvoid0/Problem-Solving"
+      },
+      {
+        "title": "Particle Collision Detection and Response Algorithm",
+        "description": "Particle Detection and Response Algorithm Designed as part of Masters course for OOP with Data Structures and Algorithms",
+        "_comment": "// TODO: https://drive.google.com/drive/folders/1MuKOYGYa6_zvAU86SPkZ2XAsp3bnH8Pw",
+        "tags": [
+          "Algorithms",
+          "Data Structures",
+          "c++",
+          "opengl"
+        ]
+      },
+      {
+        "title": "Simulation",
+        "description": "A Simulation web app developed in javascript as part of coursework for simulation",
+        "source": "https://github.com/tanvoid0/Simulation-Web-App"
+      }
+    ]
+  },
+  "skill": {
+    "frameworks": [
+      {
+        "createdAt": "2023-11-12T14:49:24.283367",
+        "id": 1,
+        "updatedAt": "2023-11-12T14:49:24.290758",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+        "name": "Spring Boot",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.303856",
+        "id": 2,
+        "updatedAt": "2023-11-12T14:49:24.308854",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        "name": "ExpressJS",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.322678",
+        "id": 3,
+        "updatedAt": "2023-11-12T14:49:24.327194",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        "name": "NodeJs",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.340324",
+        "id": 4,
+        "updatedAt": "2023-11-12T14:49:24.346701",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+        "name": "Laravel",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.360581",
+        "id": 5,
+        "updatedAt": "2023-11-12T14:49:24.366684",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        "name": "Django",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.381554",
+        "id": 6,
+        "updatedAt": "2023-11-12T14:49:24.387546",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-plain.svg",
+        "name": "FastAPI",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.40156",
+        "id": 7,
+        "updatedAt": "2023-11-12T14:49:24.408015",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+        "name": "Flask",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.42087",
+        "id": 8,
+        "updatedAt": "2023-11-12T14:49:24.426875",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+        "name": ".NET Core",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_BACKEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.441899",
+        "id": 9,
+        "updatedAt": "2023-11-12T14:49:24.447816",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-plain.svg",
+        "name": "Flutter",
+        "languages": [],
+        "libraries": [],
+        "platform": "CROSS_PLATFORM"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.461668",
+        "id": 10,
+        "updatedAt": "2023-11-12T14:49:24.467694",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "name": "React Native",
+        "languages": [],
+        "libraries": [],
+        "platform": "CROSS_PLATFORM"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.482865",
+        "id": 11,
+        "updatedAt": "2023-11-12T14:49:24.488037",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "name": "ReactJS",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_FRONTEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.503412",
+        "id": 12,
+        "updatedAt": "2023-11-12T14:49:24.5095",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-plain.svg",
+        "name": "VueJS",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_FRONTEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.525703",
+        "id": 13,
+        "updatedAt": "2023-11-12T14:49:24.531703",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain.svg",
+        "name": "jQuery",
+        "languages": [],
+        "libraries": [],
+        "platform": "WEB_FRONTEND"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.547666",
+        "id": 14,
+        "updatedAt": "2023-11-12T14:49:24.553682",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg",
+        "name": "Android",
+        "languages": [],
+        "libraries": [],
+        "platform": "PHONE_ANDROID"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.570621",
+        "id": 15,
+        "updatedAt": "2023-11-12T14:49:24.576043",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        "name": "Swing",
+        "languages": [],
+        "libraries": [],
+        "platform": "DESKTOP"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.592696",
+        "id": 16,
+        "updatedAt": "2023-11-12T14:49:24.6007",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-plain.svg",
+        "name": ".NET Desktop",
+        "languages": [],
+        "libraries": [],
+        "platform": "DESKTOP"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.618172",
+        "id": 17,
+        "updatedAt": "2023-11-12T14:49:24.623786",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
+        "name": "ElectronJS",
+        "languages": [],
+        "libraries": [],
+        "platform": "DESKTOP"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.639169",
+        "id": 18,
+        "updatedAt": "2023-11-12T14:49:24.644534",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
+        "name": "Arduino UNO",
+        "languages": [],
+        "libraries": [],
+        "platform": "IOT"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.659564",
+        "id": 19,
+        "updatedAt": "2023-11-12T14:49:24.665754",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
+        "name": "ESP NodeMCU",
+        "languages": [],
+        "libraries": [],
+        "platform": "IOT"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:24.68228",
+        "id": 20,
+        "updatedAt": "2023-11-12T14:49:24.687791",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg",
+        "name": "Raspberry Pi",
+        "languages": [],
+        "libraries": [],
+        "platform": "IOT"
+      }
+    ],
+    "hardSkills": [
+      {
+        "createdAt": "2023-11-12T15:17:06.73712",
+        "id": 2,
+        "updatedAt": "2023-11-12T15:17:17.036061",
+        "version": 1,
+        "items": [
+          {
+            "createdAt": "2023-11-12T15:17:08.69585",
+            "id": 1,
+            "updatedAt": "2023-11-12T15:17:17.04406",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-plain.svg",
+            "name": "Google Cloud",
+            "orderSeq": 1
+          },
+          {
+            "createdAt": "2023-11-12T15:17:08.898882",
+            "id": 2,
+            "updatedAt": "2023-11-12T15:17:17.045061",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+            "name": "AWS",
+            "orderSeq": 2
+          },
+          {
+            "createdAt": "2023-11-12T15:17:08.922851",
+            "id": 3,
+            "updatedAt": "2023-11-12T15:17:17.046059",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg",
+            "name": "Heroku",
+            "orderSeq": 3
+          }
+        ],
+        "name": "Cloud"
+      },
+      {
+        "createdAt": "2023-11-12T15:17:17.063063",
+        "id": 3,
+        "updatedAt": "2023-11-12T15:17:17.678742",
+        "version": 1,
+        "items": [
+          {
+            "createdAt": "2023-11-12T15:17:17.066063",
+            "id": 4,
+            "updatedAt": "2023-11-12T15:17:17.68074",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg",
+            "name": "Docker",
+            "orderSeq": 4
+          },
+          {
+            "createdAt": "2023-11-12T15:17:17.068062",
+            "id": 5,
+            "updatedAt": "2023-11-12T15:17:17.68274",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+            "name": "Kubernetes",
+            "orderSeq": 5
+          }
+        ],
+        "name": "Distributed Systems"
+      },
+      {
+        "createdAt": "2023-11-12T15:17:17.701741",
+        "id": 4,
+        "updatedAt": "2023-11-12T15:17:17.934788",
+        "version": 1,
+        "items": [
+          {
+            "createdAt": "2023-11-12T15:17:17.70374",
+            "id": 6,
+            "updatedAt": "2023-11-12T15:17:17.936788",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg",
+            "name": "Git",
+            "orderSeq": 6
+          },
+          {
+            "createdAt": "2023-11-12T15:17:17.706742",
+            "id": 7,
+            "updatedAt": "2023-11-12T15:17:17.938787",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+            "name": "Github",
+            "orderSeq": 7
+          },
+          {
+            "createdAt": "2023-11-12T15:17:17.709739",
+            "id": 8,
+            "updatedAt": "2023-11-12T15:17:17.939788",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
+            "name": "Bitbucket",
+            "orderSeq": 8
+          }
+        ],
+        "name": "Version Controlling"
+      },
+      {
+        "createdAt": "2023-11-12T15:17:17.958788",
+        "id": 5,
+        "updatedAt": "2023-11-12T15:17:18.47781",
+        "version": 1,
+        "items": [
+          {
+            "createdAt": "2023-11-12T15:17:17.961789",
+            "id": 9,
+            "updatedAt": "2023-11-12T15:17:18.47881",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg",
+            "name": "XD",
+            "orderSeq": 9
+          },
+          {
+            "createdAt": "2023-11-12T15:17:17.964786",
+            "id": 10,
+            "updatedAt": "2023-11-12T15:17:18.47981",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+            "name": "Photoshop",
+            "orderSeq": 10
+          },
+          {
+            "createdAt": "2023-11-12T15:17:17.966791",
+            "id": 11,
+            "updatedAt": "2023-11-12T15:17:18.48181",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
+            "name": "Illustrator",
+            "orderSeq": 11
+          }
+        ],
+        "name": "Softwares"
+      },
+      {
+        "createdAt": "2023-11-12T15:17:18.49981",
+        "id": 6,
+        "updatedAt": "2023-11-12T15:17:18.51681",
+        "version": 1,
+        "items": [
+          {
+            "createdAt": "2023-11-12T15:17:18.501811",
+            "id": 12,
+            "updatedAt": "2023-11-12T15:17:18.51781",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg",
+            "name": "Ubuntu",
+            "orderSeq": 12
+          },
+          {
+            "createdAt": "2023-11-12T15:17:18.50481",
+            "id": 13,
+            "updatedAt": "2023-11-12T15:17:18.51881",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
+            "name": "Mac",
+            "orderSeq": 13
+          },
+          {
+            "createdAt": "2023-11-12T15:17:18.50681",
+            "id": 14,
+            "updatedAt": "2023-11-12T15:17:18.51981",
+            "version": 1,
+            "fluencyVal": 0,
+            "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg",
+            "name": "Windows",
+            "orderSeq": 14
+          }
+        ],
+        "name": "Operating Systems"
+      }
+    ],
+    "id": 1,
+    "languages": [
+      {
+        "createdAt": "2023-11-12T14:49:30.390507",
+        "id": 1,
+        "updatedAt": "2023-11-12T14:49:30.397904",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xeb89",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        "name": "Python",
+        "orderSeq": 1
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.410769",
+        "id": 2,
+        "updatedAt": "2023-11-12T14:49:30.414894",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe842",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        "name": "Java",
+        "orderSeq": 2
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.426615",
+        "id": 3,
+        "updatedAt": "2023-11-12T14:49:30.430611",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe9b1",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+        "name": "Dart",
+        "orderSeq": 3
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.443665",
+        "id": 4,
+        "updatedAt": "2023-11-12T14:49:30.447664",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe845",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        "name": "JavaScript",
+        "orderSeq": 4
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.460529",
+        "id": 5,
+        "updatedAt": "2023-11-12T14:49:30.46444",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe920",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg",
+        "name": "Typescript",
+        "orderSeq": 5
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.477464",
+        "id": 6,
+        "updatedAt": "2023-11-12T14:49:30.482482",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xf2db",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
+        "name": "Arduino",
+        "orderSeq": 6
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.495461",
+        "id": 7,
+        "updatedAt": "2023-11-12T14:49:30.500462",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe979",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-plain.svg",
+        "name": "Bash",
+        "orderSeq": 7
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.514562",
+        "id": 8,
+        "updatedAt": "2023-11-12T14:49:30.519563",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe635",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg",
+        "name": "C++",
+        "orderSeq": 8
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.533572",
+        "id": 9,
+        "updatedAt": "2023-11-12T14:49:30.539571",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe637",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
+        "name": "c#",
+        "orderSeq": 9
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.553513",
+        "id": 10,
+        "updatedAt": "2023-11-12T14:49:30.559028",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xeb71",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg",
+        "name": "PHP",
+        "orderSeq": 10
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.573574",
+        "id": 11,
+        "updatedAt": "2023-11-12T14:49:30.578577",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xeb44",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
+        "name": "MongoDB",
+        "orderSeq": 11
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.593506",
+        "id": 12,
+        "updatedAt": "2023-11-12T14:49:30.599507",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xeb61",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg",
+        "name": "MySQL",
+        "orderSeq": 12
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.615449",
+        "id": 13,
+        "updatedAt": "2023-11-12T14:49:30.62045",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xeb7d",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg",
+        "name": "PostgreSQL",
+        "orderSeq": 13
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.636571",
+        "id": 14,
+        "updatedAt": "2023-11-12T14:49:30.642589",
+        "version": 1,
+        "fluencyVal": 0,
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+        "name": "SQLite",
+        "orderSeq": 14
+      },
+      {
+        "createdAt": "2023-11-12T14:49:30.659456",
+        "id": 15,
+        "updatedAt": "2023-11-12T14:49:30.666489",
+        "version": 1,
+        "fluencyVal": 0,
+        "icon": "0xe98a",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+        "name": "Firebase",
+        "orderSeq": 15
+      }
+    ],
+    "linguisticSkills": [
+      {
+        "createdAt": "2023-11-12T14:49:33.31106",
+        "id": 1,
+        "updatedAt": "2023-11-12T14:49:33.318573",
+        "version": 1,
+        "fluency": "Fluent",
+        "fluencyVal": 0,
+        "image": "https://flagicons.lipis.dev/flags/4x3/gb.svg",
+        "name": "English",
+        "orderSeq": 1
+      },
+      {
+        "createdAt": "2023-11-12T14:49:33.33207",
+        "id": 2,
+        "updatedAt": "2023-11-12T14:49:33.336594",
+        "version": 1,
+        "fluency": "Native",
+        "fluencyVal": 0,
+        "image": "https://flagicons.lipis.dev/flags/4x3/bd.svg",
+        "name": "Bengali",
+        "orderSeq": 2
+      },
+      {
+        "createdAt": "2023-11-12T14:49:33.347958",
+        "id": 3,
+        "updatedAt": "2023-11-12T14:49:33.352463",
+        "version": 1,
+        "fluency": "Fluent Speaker",
+        "fluencyVal": 0,
+        "image": "https://flagicons.lipis.dev/flags/4x3/in.svg",
+        "name": "Hindi",
+        "orderSeq": 3
+      },
+      {
+        "createdAt": "2023-11-12T14:49:33.364343",
+        "id": 4,
+        "updatedAt": "2023-11-12T14:49:33.369342",
+        "version": 1,
+        "fluency": "Fluent Speaker",
+        "fluencyVal": 0,
+        "image": "https://flagicons.lipis.dev/flags/4x3/pk.svg",
+        "name": "Urdu",
+        "orderSeq": 4
+      },
+      {
+        "createdAt": "2023-11-12T14:49:33.381944",
+        "id": 5,
+        "updatedAt": "2023-11-12T14:49:33.386749",
+        "version": 1,
+        "fluency": "Intermediate Reader",
+        "fluencyVal": 0,
+        "image": "https://flagicons.lipis.dev/flags/4x3/sa.svg",
+        "name": "Quranic Arabic",
+        "orderSeq": 5
+      }
+    ],
+    "softSkills": [
+      {
+        "createdAt": "2023-11-12T14:49:16.911983",
+        "id": 1,
+        "updatedAt": "2023-11-12T14:49:16.919838",
+        "version": 1,
+        "fluencyVal": 0,
+        "name": "Creative"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:16.939829",
+        "id": 2,
+        "updatedAt": "2023-11-12T14:49:16.944845",
+        "version": 1,
+        "fluencyVal": 0,
+        "name": "Curious"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:16.959853",
+        "id": 3,
+        "updatedAt": "2023-11-12T14:49:16.96587",
+        "version": 1,
+        "fluencyVal": 0,
+        "name": "Persistant"
+      },
+      {
+        "createdAt": "2023-11-12T14:49:16.98006",
+        "id": 4,
+        "updatedAt": "2023-11-12T14:49:16.984572",
+        "version": 1,
+        "fluencyVal": 0,
+        "name": "Learner"
+      }
+    ]
+  },
+  "socials": [
+    {
+      "createdAt": "2023-11-12T16:56:20.286559",
+      "id": 1,
+      "updatedAt": "2023-11-12T16:56:20.292559",
+      "version": 1,
+      "icon": "61595",
+      "orderSeq": 1,
+      "title": "Github",
+      "url": "https://github.com/tanvoid0"
+    },
+    {
+      "createdAt": "2023-11-12T16:56:20.299968",
+      "id": 2,
+      "updatedAt": "2023-11-12T16:56:20.304328",
+      "version": 1,
+      "icon": "61580",
+      "orderSeq": 2,
+      "title": "Linkedin",
+      "url": "https://linkedin.com/in/tanvoid0"
+    },
+    {
+      "createdAt": "2023-11-12T16:56:20.312335",
+      "id": 3,
+      "updatedAt": "2023-11-12T16:56:20.316421",
+      "version": 1,
+      "icon": "61804",
+      "orderSeq": 3,
+      "title": "Stackoverflow",
+      "url": "https://stackoverflow.com/users/6905723/tanveer"
+    }
+  ],
+  "title": "Software Developer",
+  "titles": "Backend Web Developer, Flutter Developer",
+  "webUrl": "https://tanvoid0.github.io",
+  "whatIDo": ""
+}

@@ -9,7 +9,7 @@ import java.util.Optional;
 @ApplicationScoped
 public class PortfolioRepository implements PanacheRepository<Portfolio> {
 
-    public Portfolio findByUser(final PortfolioUser portfolioUser) {
+    public Portfolio findOrCreateByUser(final PortfolioUser portfolioUser) {
         final Optional<Portfolio> portfolio = find("portfolioUser", portfolioUser).firstResultOptional();
 
         if (portfolio.isPresent()) {

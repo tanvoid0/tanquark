@@ -9,7 +9,7 @@ import java.util.Optional;
 @ApplicationScoped
 public class SkillGroupRepository implements PanacheRepository<SkillGroup> {
 
-    public SkillGroup findByUser(final PortfolioUser portfolioUser) {
+    public SkillGroup findOrCreateByUser(final PortfolioUser portfolioUser) {
         final Optional<SkillGroup> skill = find("portfolioUser", portfolioUser).firstResultOptional();
 
         if (skill.isPresent()) {

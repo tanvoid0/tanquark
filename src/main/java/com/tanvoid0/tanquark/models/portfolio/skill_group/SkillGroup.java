@@ -15,6 +15,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.OrderBy;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,31 +29,22 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @Entity
+@Table(name = "skill_group")
 public class SkillGroup extends BaseEntity implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1074405926970595615L;
-
-//  @OneToMany(mappedBy = "skill", cascade = CascadeType.ALL, orphanRemoval = true)
-//  private Set<SkillCloud> cloud;
-//
-//  @OneToMany(mappedBy = "skill", cascade = CascadeType.ALL, orphanRemoval = true)
-//  private Set<SkillLinguistic> linguistic;
-//
-//  @OneToMany(mappedBy = "skill", cascade = CascadeType.ALL, orphanRemoval = true)
-//  private Set<SkillOS> os;
-//
-//  @OneToMany(mappedBy = "skill", cascade = CascadeType.ALL, orphanRemoval = true)
-//  private Set<SkillSoftware> software;
 
     @OneToMany(mappedBy = "skillGroup", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("orderSeq ASC")
     private List<SkillLanguage> languages;
 
     @OneToMany(mappedBy = "skillGroup", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("orderSeq ASC")
     private List<SkillFramework> frameworks;
 
     @OneToMany(mappedBy = "skillGroup", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("orderSeq ASC")
     private List<SkillLibrary> libraries;
 
 

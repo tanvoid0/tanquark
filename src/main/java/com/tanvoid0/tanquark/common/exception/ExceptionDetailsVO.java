@@ -30,7 +30,7 @@ public class ExceptionDetailsVO implements Serializable {
 
     @JsonIgnore
     @Getter(AccessLevel.NONE)
-    private HttpResponseStatus httpStatus = HttpResponseStatus.INTERNAL_SERVER_ERROR;
+    private transient HttpResponseStatus httpStatus = HttpResponseStatus.INTERNAL_SERVER_ERROR;
 
     private String status = HttpResponseStatus.INTERNAL_SERVER_ERROR.reasonPhrase();
 
@@ -43,33 +43,30 @@ public class ExceptionDetailsVO implements Serializable {
     private String message;
     private String debugMessage;
     private String type;
-    private List<ValidationProperty> validations = new ArrayList<>();
+    private transient List<ValidationProperty> validations = new ArrayList<>();
 
     public static Response response(final Exception ex) {
         log.debug("A Global Exception occurred.");
         log.error("Exception: {}", ex.getClass().getSimpleName());
         log.error("Message: {}", ex.getMessage());
-        log.error("Cause: {}", ex.getCause().toString());
+        if (ex.getCause() != null) {
+            log.error("Cause: {}", ex.getCause().toString());
+        }
         log.error("Stacktrace: {}", (Object[]) ex.getStackTrace());
         final ExceptionDetailsVO detailsVO = new ExceptionDetailsVO();
-        if (ex.getClass().getSimpleName().startsWith("Invalid")) {
+
+        if (ex instanceof InvalidRequestException validationEx) {
+            detailsVO.setHttpStatus(HttpResponseStatus.BAD_REQUEST);
+            detailsVO.validations.addAll(validationEx.getValidations());
+        } else if (ex.getClass().getSimpleName().startsWith("Invalid")) {
             detailsVO.setHttpStatus(HttpResponseStatus.BAD_REQUEST);
         } else if (ex.getClass().getSimpleName().endsWith("NotFoundException")) {
             detailsVO.setHttpStatus(HttpResponseStatus.NOT_FOUND);
         }
 
-        if (ex instanceof InvalidRequestException validationEx) {
-            detailsVO.setHttpStatus(HttpResponseStatus.BAD_REQUEST);
-            detailsVO.validations.addAll(validationEx.getValidations());
-        }
-
         detailsVO.setMessage(ex.getMessage());
         detailsVO.setType(ex.getClass().getSimpleName());
-        return Response
-                .status(detailsVO.getStatusCode())
-                .entity(detailsVO)
-                .type(APPLICATION_JSON)
-                .build();
+        return Response.status(detailsVO.getStatusCode()).entity(detailsVO).type(APPLICATION_JSON).build();
     }
 
 

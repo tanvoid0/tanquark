@@ -1,5 +1,6 @@
 package com.tanvoid0.tanquark.models.portfolio.skill_group.language;
 
+import com.tanvoid0.tanquark.models.portfolio.skill_group.SkillGroup;
 import com.tanvoid0.tanquark.models.portfolio.skill_group.hard.NewSkillHardItemVO;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.modelmapper.ModelMapper;
@@ -12,7 +13,9 @@ public class SkillLanguageMapper {
         return mapper.map(entity, SkillLanguageVO.class);
     }
 
-    public SkillLanguage toEntity(final NewSkillHardItemVO vo) {
-        return mapper.map(vo, SkillLanguage.class);
+    public SkillLanguage toEntity(final NewSkillHardItemVO vo, final SkillGroup skillGroup) {
+        final SkillLanguage entity = mapper.map(vo, SkillLanguage.class);
+        entity.setSkillGroup(skillGroup);
+        return entity;
     }
 }

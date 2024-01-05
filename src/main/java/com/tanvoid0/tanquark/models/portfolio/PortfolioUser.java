@@ -65,6 +65,8 @@ public class PortfolioUser extends BaseEntity implements Serializable {
 
     private String webUrl;
 
+    private String publicEmail;
+
     @OneToOne(cascade = CascadeType.REMOVE)
     private User user;
 

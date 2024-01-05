@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   server:
-    image: tanvoid0/tanquark:v.1.0
+    image: tanvoid0/tanquark:latest
     build:
       context: .
       dockerfile: src/main/docker/Dockerfile.jvm

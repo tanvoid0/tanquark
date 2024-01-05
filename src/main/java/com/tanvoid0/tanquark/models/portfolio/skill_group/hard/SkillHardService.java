@@ -4,11 +4,14 @@ import com.tanvoid0.tanquark.config.auth.AuthService;
 import com.tanvoid0.tanquark.models.portfolio.PortfolioUser;
 import com.tanvoid0.tanquark.models.portfolio.skill_group.SkillGroup;
 import com.tanvoid0.tanquark.models.portfolio.skill_group.SkillGroupRepository;
+import com.tanvoid0.tanquark.models.portfolio.skill_group.framework.SkillHardRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 
 import java.util.List;
+import java.util.Optional;
 
 @ApplicationScoped
 @Transactional
@@ -18,12 +21,14 @@ public class SkillHardService {
     private final SkillHardMapper skillHardMapper;
 
     private final SkillGroupRepository skillGroupRepository;
+    private final SkillHardRepository skillHardRepository;
+    private final SkillHardItemRepository skillHardItemRepository;
 
     private final AuthService authService;
+    private final ModelMapper mapper = new ModelMapper();
 
     public SkillHardVO add(final NewSkillHardVO newVO) {
-        final SkillHard entity = skillHardMapper.toEntity(newVO);
-        entity.setSkillGroup(getSkillGroup());
+        final SkillHard entity = skillHardMapper.toEntity(newVO, getSkillGroup());
         entity.persist();
 
         final SkillHardVO vo = skillHardMapper.toVO(entity);
@@ -48,6 +53,43 @@ public class SkillHardService {
 
     private SkillGroup getSkillGroup() {
         final PortfolioUser user = authService.getAuthenticatedPortfolioUser();
-        return skillGroupRepository.findByUser(user);
+        return skillGroupRepository.findOrCreateByUser(user);
+    }
+
+    public SkillHardItemVO migrate(final NewSkillHardItemVO request, final SkillHard skillHard) {
+        final Optional<SkillHardItem> skillHardItem = skillHardItemRepository.findBySkillHardAndName(skillHard.getId(), request.getName());
+
+        SkillHardItem entity;
+        if (skillHardItem.isPresent()) {
+            entity = skillHardItem.get();
+            mapper.map(request, entity);
+        } else {
+            entity = skillHardMapper.toEntity(request, skillHard);
+        }
+        entity.persist();
+        return skillHardMapper.toVO(entity);
+    }
+
+    public SkillHardVO migrate(final NewSkillHardVO request, final SkillGroup skillGroup) {
+        final Optional<SkillHard> skillHard = skillHardRepository.findBySkillGroupAndName(skillGroup.getId(), request.getName());
+
+        SkillHard entity;
+        if (skillHard.isPresent()) {
+            entity = skillHard.get();
+            final UpdateSkillHardVO updateVO = mapper.map(request, UpdateSkillHardVO.class);
+            mapper.map(updateVO, entity);
+        } else {
+            entity = skillHardMapper.toEntity(request, skillGroup);
+        }
+        entity.persistAndFlush();
+
+        final SkillHardVO vo = skillHardMapper.toVO(entity);
+        final List<SkillHardItemVO> items = request.getItems().stream().map(item -> this.migrate(item, entity)).toList();
+        vo.setItems(items);
+        return vo;
+    }
+
+    public List<SkillHardVO> migrate(List<NewSkillHardVO> request, SkillGroup skillGroup) {
+        return request.stream().map(item -> migrate(item, skillGroup)).toList();
     }
 }

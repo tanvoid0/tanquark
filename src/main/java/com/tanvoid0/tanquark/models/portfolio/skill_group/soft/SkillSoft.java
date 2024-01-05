@@ -27,6 +27,6 @@ public class SkillSoft extends BaseSkill implements Serializable {
     private static final long serialVersionUID = 5885247111949774697L;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "skill_id", nullable = false)
+    @JoinColumn(name = "skill_group_id", nullable = false)
     private SkillGroup skillGroup;
 }

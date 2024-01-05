@@ -1,25 +1,24 @@
 package com.tanvoid0.tanquark.models.portfolio.career.organization.experience.vo;
 
-import com.tanvoid0.tanquark.common.base.interfaces.ModelMapperInterface;
+import com.tanvoid0.tanquark.models.portfolio.career.Career;
 import com.tanvoid0.tanquark.models.portfolio.career.organization.experience.Experience;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.modelmapper.ModelMapper;
 
 @ApplicationScoped
-public class ExperienceMapper implements ModelMapperInterface<Experience, ExperienceVO, NewExperienceVO, UpdateExperienceVO> {
+public class ExperienceMapper {
     private ModelMapper mapper = new ModelMapper();
 
-    @Override
-    public Experience toEntity(NewExperienceVO newExperienceVO) {
-        return mapper.map(newExperienceVO, Experience.class);
+    public Experience toEntity(NewExperienceVO newExperienceVO, final Career career) {
+        final Experience entity = mapper.map(newExperienceVO, Experience.class);
+        entity.setCareer(career);
+        return entity;
     }
 
-    @Override
     public void copy(UpdateExperienceVO updateExperienceVO, Experience experience) {
         mapper.map(updateExperienceVO, experience);
     }
 
-    @Override
     public ExperienceVO toVO(Experience experience) {
         return mapper.map(experience, ExperienceVO.class);
     }

@@ -9,12 +9,24 @@ import io.quarkus.security.jpa.Roles;
 import io.quarkus.security.jpa.UserDefinition;
 import io.quarkus.security.jpa.Username;
 import jakarta.annotation.Nonnull;
-import jakarta.persistence.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.Email;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -54,21 +66,20 @@ public class User extends BaseEntity implements Serializable {
     public String phone;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(
-            name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     @Roles
-    private Set<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 
     public Set<String> getRoles() {
-        return roles.stream()
-                .map(role -> role.getName().toString())
-                .collect(Collectors.toSet());
+        return roles.stream().map(role -> role.getName().toString()).collect(Collectors.toSet());
     }
 
     public void addRole(Role role) {
+        final Set<Role> tempRoles = roles;
+        roles = new HashSet<>();
+        if (Objects.nonNull(tempRoles)) {
+            roles.addAll(tempRoles);
+        }
         roles.add(role);
     }
 

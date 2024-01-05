@@ -2,7 +2,12 @@ package com.tanvoid0.tanquark.models.portfolio.hobby;
 
 import com.tanvoid0.tanquark.common.base.BaseEntityOrdered;
 import com.tanvoid0.tanquark.models.portfolio.PortfolioUser;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +34,9 @@ public class Hobby extends BaseEntityOrdered implements Serializable {
     private String icon;
 
     private String image;
+
+//    @Column(nullable = false, columnDefinition = "boolean default false")
+//    private boolean secret;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "portfolio_user_id", nullable = false)

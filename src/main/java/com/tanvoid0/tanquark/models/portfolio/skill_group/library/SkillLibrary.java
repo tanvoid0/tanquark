@@ -39,6 +39,6 @@ public class SkillLibrary extends BaseEntityOrdered implements Serializable {
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "skill_id", nullable = false)
+    @JoinColumn(name = "skill_group_id", nullable = false)
     private SkillGroup skillGroup;
 }

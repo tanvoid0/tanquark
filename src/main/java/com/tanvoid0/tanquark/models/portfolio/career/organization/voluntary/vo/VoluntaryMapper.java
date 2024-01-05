@@ -1,25 +1,24 @@
 package com.tanvoid0.tanquark.models.portfolio.career.organization.voluntary.vo;
 
-import com.tanvoid0.tanquark.common.base.interfaces.ModelMapperInterface;
+import com.tanvoid0.tanquark.models.portfolio.career.Career;
 import com.tanvoid0.tanquark.models.portfolio.career.organization.voluntary.Voluntary;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.modelmapper.ModelMapper;
 
 @ApplicationScoped
-public class VoluntaryMapper implements ModelMapperInterface<Voluntary, VoluntaryVO, NewVoluntaryVO, UpdateVoluntaryVO> {
+public class VoluntaryMapper {
     private ModelMapper mapper = new ModelMapper();
 
-    @Override
-    public Voluntary toEntity(NewVoluntaryVO newVoluntaryVO) {
-        return mapper.map(newVoluntaryVO, Voluntary.class);
+    public Voluntary toEntity(final NewVoluntaryVO newVoluntaryVO, final Career career) {
+        final Voluntary entity = mapper.map(newVoluntaryVO, Voluntary.class);
+        entity.setCareer(career);
+        return entity;
     }
 
-    @Override
     public void copy(UpdateVoluntaryVO updateVoluntaryVO, Voluntary voluntary) {
         mapper.map(updateVoluntaryVO, voluntary);
     }
 
-    @Override
     public VoluntaryVO toVO(Voluntary voluntary) {
         return mapper.map(voluntary, VoluntaryVO.class);
     }

@@ -2,7 +2,6 @@ package com.tanvoid0.tanquark.models.portfolio.career.organization;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.tanvoid0.tanquark.common.base.BaseVO;
 import com.tanvoid0.tanquark.models.portfolio.career.organization.academic.vo.NewAcademicVO;
 import com.tanvoid0.tanquark.models.portfolio.career.organization.achievement.vo.NewAchievementVO;
 import com.tanvoid0.tanquark.models.portfolio.career.organization.certificate.vo.NewCertificateVO;
@@ -15,6 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serial;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -32,7 +32,8 @@ import java.io.Serial;
         @JsonSubTypes.Type(value = NewExperienceVO.class, name = NewExperienceVO.NAME),
         @JsonSubTypes.Type(value = NewVoluntaryVO.class, name = NewVoluntaryVO.NAME)
 })
-public abstract class NewOrganizationVO extends BaseVO {
+public abstract class NewOrganizationVO implements Serializable {
+    
     @Serial
     private static final long serialVersionUID = 418911591761821699L;
 

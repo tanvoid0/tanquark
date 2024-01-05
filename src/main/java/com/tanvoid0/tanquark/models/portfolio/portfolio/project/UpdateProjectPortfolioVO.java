@@ -1,4 +1,4 @@
-package com.tanvoid0.tanquark.models.portfolio.portfolio.project_porfolio;
+package com.tanvoid0.tanquark.models.portfolio.portfolio.project;
 
 import com.tanvoid0.tanquark.common.base.BaseVO;
 import jakarta.validation.constraints.NotNull;

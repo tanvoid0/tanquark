@@ -7,6 +7,8 @@ import com.tanvoid0.tanquark.config.auth.vo.LoginRequestVO;
 import com.tanvoid0.tanquark.config.auth.vo.RegisterRequestVO;
 import com.tanvoid0.tanquark.models.portfolio.PortfolioUser;
 import com.tanvoid0.tanquark.models.portfolio.PortfolioUserRepository;
+import com.tanvoid0.tanquark.models.portfolio.migration.NewPortfolioUserMigrationVO;
+import com.tanvoid0.tanquark.models.user.UpdateUserVO;
 import com.tanvoid0.tanquark.models.user.User;
 import com.tanvoid0.tanquark.models.user.UserRepository;
 import com.tanvoid0.tanquark.models.user.mapper.UserMapper;
@@ -23,6 +25,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.jwt.Claims;
+import org.modelmapper.ModelMapper;
 
 import java.security.Principal;
 import java.time.Instant;
@@ -47,6 +50,7 @@ public class AuthService {
     private final UserMapper userMapper;
 
     private final SecurityContext securityContext;
+    private final ModelMapper mapper = new ModelMapper();
 
     @ConfigProperty(name = "mp.jwt.verify.issuer")
     String issuer;
@@ -68,6 +72,24 @@ public class AuthService {
         user.persist();
 //        userRepository.persist(user);
         return getAuthenticatedUser(user);
+    }
+
+    public AuthenticatedUserVO migrate(final NewPortfolioUserMigrationVO requestVO) {
+        final Optional<User> user = userRepository.findByUsername(requestVO.getUsername());
+
+        User entity;
+        if (user.isPresent()) {
+            entity = user.get();
+            final LoginRequestVO loginRequestVO = mapper.map(requestVO, LoginRequestVO.class);
+            login(loginRequestVO);
+            final UpdateUserVO updateUserVO = mapper.map(requestVO, UpdateUserVO.class);
+            mapper.map(updateUserVO, entity);
+        } else {
+            final RegisterRequestVO registerRequestVO = mapper.map(requestVO, RegisterRequestVO.class);
+            entity = userMapper.toEntity(registerRequestVO);
+        }
+        entity.persistAndFlush();
+        return userMapper.toAuthenticatedVO(entity);
     }
 
     public User getAuthenticatedUser() {

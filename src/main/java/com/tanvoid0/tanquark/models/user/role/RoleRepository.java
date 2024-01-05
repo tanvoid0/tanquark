@@ -28,6 +28,9 @@ public class RoleRepository implements PanacheRepository<Role> {
                 newRoles.add(newRole.getName().name());
             }
         });
-        log.info("Total {} roles. new roles inserted '{}'", roles.size(), String.join(", ", newRoles));
+        log.debug("Total {} roles.", roles.size());
+        if (!newRoles.isEmpty()) {
+            log.debug("New roles inserted '{}'", String.join(", ", newRoles));
+        }
     }
 }

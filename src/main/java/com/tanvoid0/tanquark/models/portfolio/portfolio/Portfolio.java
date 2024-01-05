@@ -2,8 +2,8 @@ package com.tanvoid0.tanquark.models.portfolio.portfolio;
 
 import com.tanvoid0.tanquark.common.base.BaseEntity;
 import com.tanvoid0.tanquark.models.portfolio.PortfolioUser;
-import com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge_portfolio.OnlineJudgePortfolio;
-import com.tanvoid0.tanquark.models.portfolio.portfolio.project_porfolio.ProjectPortfolio;
+import com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge.OnlineJudge;
+import com.tanvoid0.tanquark.models.portfolio.portfolio.project.Project;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -35,11 +35,11 @@ public class Portfolio extends BaseEntity implements Serializable {
 
     @OneToMany(mappedBy = "portfolio", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("orderSeq ASC")
-    private Set<OnlineJudgePortfolio> onlineJudges = new HashSet<>();
+    private Set<OnlineJudge> onlineJudges = new HashSet<>();
 
     @OneToMany(mappedBy = "portfolio", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("orderSeq ASC")
-    private Set<ProjectPortfolio> projects = new HashSet<>();
+    private Set<Project> projects = new HashSet<>();
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "portfolio_user_id", nullable = false)

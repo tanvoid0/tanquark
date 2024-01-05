@@ -1,4 +1,4 @@
-package com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge_portfolio;
+package com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge;
 
 import com.tanvoid0.tanquark.common.base.BaseOrderedVO;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.io.Serial;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class OnlineJudgePortfolioVO extends BaseOrderedVO {
+public class OnlineJudgeVO extends BaseOrderedVO {
     @Serial
     private static final long serialVersionUID = 7033134846304868407L;
 

@@ -4,24 +4,29 @@ import com.tanvoid0.tanquark.common.base.SwapOrderSequence;
 import com.tanvoid0.tanquark.common.exception.ResourceNotFoundException;
 import com.tanvoid0.tanquark.config.auth.AuthService;
 import com.tanvoid0.tanquark.models.portfolio.PortfolioUser;
-import com.tanvoid0.tanquark.models.portfolio.hobby.vo.*;
+import com.tanvoid0.tanquark.models.portfolio.PortfolioUserRepository;
+import com.tanvoid0.tanquark.models.portfolio.hobby.vo.HobbyMapper;
+import com.tanvoid0.tanquark.models.portfolio.hobby.vo.HobbyVO;
+import com.tanvoid0.tanquark.models.portfolio.hobby.vo.NewHobbyVO;
+import com.tanvoid0.tanquark.models.portfolio.hobby.vo.UpdateHobbyVO;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 @ApplicationScoped
 @Transactional
+@RequiredArgsConstructor
 public class HobbyService {
-    @Inject
-    HobbyRepository hobbyRepository;
+    private final HobbyRepository hobbyRepository;
+    private final PortfolioUserRepository portfolioUserRepository;
 
-    @Inject
-    AuthService authService;
+    private final AuthService authService;
 
-    HobbyMapper hobbyMapper = new HobbyMapperImpl();
+    private final HobbyMapper hobbyMapper;
 
     private Hobby findEntityById(final long id) {
         return hobbyRepository.findByIdOptional(id).orElseThrow(() -> new ResourceNotFoundException("Hobby", "id", id));
@@ -36,17 +41,42 @@ public class HobbyService {
         return hobbyRepository.findAllByUserId(userId).stream().map(item -> hobbyMapper.toVO(item)).toList();
     }
 
-    public HobbyVO addHobby(final NewHobbyVO newVO) {
-        final PortfolioUser user = authService.getAuthenticatedPortfolioUser();
-
-        final Hobby hobby = hobbyMapper.toEntity(newVO);
-        hobby.setPortfolioUser(user);
+    public HobbyVO addHobby(final NewHobbyVO newVO, final PortfolioUser user) {
+        final Hobby hobby = hobbyMapper.toEntity(newVO, user);
         hobby.persist();
         return hobbyMapper.toVO(hobby);
     }
 
+    public HobbyVO addHobby(final NewHobbyVO newVO) {
+        final PortfolioUser user = authService.getAuthenticatedPortfolioUser();
+        return addHobby(newVO, user);
+    }
+
     public List<HobbyVO> addHobby(final List<NewHobbyVO> newVOs) {
-        return newVOs.stream().map(this::addHobby).toList();
+        final PortfolioUser user = authService.getAuthenticatedPortfolioUser();
+
+        return newVOs.stream().map(item -> addHobby(item, user)).toList();
+    }
+
+    public HobbyVO migrate(final NewHobbyVO request, final PortfolioUser user) {
+        final Optional<Hobby> hobby = hobbyRepository.findByUserIdAndTitle(user.getId(), request.getTitle());
+
+        Hobby entity;
+
+        if (hobby.isPresent()) {
+            entity = hobby.get();
+            hobbyMapper.mapper.map(request, entity);
+        } else {
+            entity = hobbyMapper.toEntity(request, user);
+        }
+        entity.persistAndFlush();
+        return hobbyMapper.toVO(entity);
+    }
+
+    public List<HobbyVO> migrate(final List<NewHobbyVO> request, final String username) {
+        final PortfolioUser portfolioUser = portfolioUserRepository.findByUserUsername(username).orElseThrow(() -> new ResourceNotFoundException("PortfolioUser", "username", username));
+
+        return request.stream().map(item -> this.migrate(item, portfolioUser)).toList();
     }
 
     public List<HobbyVO> swap(final SwapOrderSequence request) {

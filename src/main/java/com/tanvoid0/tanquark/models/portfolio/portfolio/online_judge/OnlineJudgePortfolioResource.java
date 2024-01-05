@@ -1,4 +1,4 @@
-package com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge_portfolio;
+package com.tanvoid0.tanquark.models.portfolio.portfolio.online_judge;
 
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -21,20 +21,20 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OnlineJudgePortfolioResource {
 
-    private final OnlineJudgePortfolioService onlineJudgePortfolioService;
+    private final OnlineJudgeService onlineJudgeService;
 
     @POST
     @Path("/")
-    public Response create(@RequestBody final NewOnlineJudgePortfolioVO request) {
-        final OnlineJudgePortfolioVO response = onlineJudgePortfolioService.add(request);
+    public Response create(@RequestBody final NewOnlineJudgeVO request) {
+        final OnlineJudgeVO response = onlineJudgeService.add(request);
 
         return Response.ok(response).status(Response.Status.CREATED).build();
     }
 
     @POST
     @Path("/batch")
-    public Response create(@RequestBody final List<NewOnlineJudgePortfolioVO> request) {
-        final List<OnlineJudgePortfolioVO> response = onlineJudgePortfolioService.add(request);
+    public Response create(@RequestBody final List<NewOnlineJudgeVO> request) {
+        final List<OnlineJudgeVO> response = onlineJudgeService.add(request);
         return Response.ok(response).status(Response.Status.CREATED).build();
     }
 }

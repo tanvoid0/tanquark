@@ -25,6 +25,6 @@ public class SkillHardItem extends BaseSkill implements Serializable {
     private static final long serialVersionUID = -4305076894803719651L;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "skill_id", nullable = false)
+    @JoinColumn(name = "skill_hard_id", nullable = false)
     private SkillHard skill;
 }

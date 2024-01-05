@@ -8,6 +8,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +22,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "career_academic")
+@Table(name = "career_academic", uniqueConstraints = @UniqueConstraint(
+        columnNames = {"title", "institution"}
+))
 public class Academic extends Organization implements Serializable {
 
     public static final String NAME = "Academic";
